@@ -1,13 +1,13 @@
 [package]
-name = "sqlgen"
+name = "psqlgen"
 version = "0.1.0"
 edition = "2021"
 authors = ["Franklin E. Blanco"]
-description = ""
+description = "PostgreSQL Query generation from migrations."
 license = "MIT"
 readme = "README.md"
-repository = ""
-documentation = ""
+repository = "https://github.com/franklinblanco/psqlgen"
+documentation = "https://docs.rs/psqlgen/"
 
 [dependencies]
 clap = { version = "4.3.5", features = ["derive"] }
