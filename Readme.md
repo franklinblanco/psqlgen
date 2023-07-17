@@ -24,7 +24,7 @@ And we want to generate our SQL queries in
         migration1
         migration2
 We then run
-`psqlgen -i migrations/ -0 sql/`
+`psqlgen -i migrations/ -o sql/`
 Assuming valid input, This will create:
     sql
         migration1 
