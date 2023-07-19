@@ -14,26 +14,26 @@ pub fn generate_sql_files_from_query_needs_list(query_needs_list: Vec<QueryNeeds
         let select_str = generate_select(query_needs);
         
         let path_to_write = dir_path.join("insert.sql");
-        if path_to_write.exists() {
+        if !path_to_write.exists() {
             let mut file = File::create(path_to_write)?;
             file.write_all(insert_str.as_bytes())?;
         }
         
 
         let path_to_write = dir_path.join("update.sql");
-        if path_to_write.exists() {
+        if !path_to_write.exists() {
             let mut file = File::create(path_to_write)?;
             file.write_all(update_str.as_bytes())?;
         }
 
         let path_to_write = dir_path.join("delete.sql");
-        if path_to_write.exists() {
+        if !path_to_write.exists() {
             let mut file = File::create(path_to_write)?;
             file.write_all(delete_str.as_bytes())?;
         }
 
         let path_to_write = dir_path.join("get.sql");
-        if path_to_write.exists() {
+        if !path_to_write.exists() {
             let mut file = File::create(path_to_write)?;
             file.write_all(select_str.as_bytes())?;
         }
